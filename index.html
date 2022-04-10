@@ -20,8 +20,13 @@
     <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
         <div class="container">
           <div class="flex items-center justify-between relative">
-            <div class="px-4">
-              <a href="#home" class="font-bold text-lg text-primary block py-6">Alfa Omega Families</a>
+            <div class="px-4 flex justify-center">
+              <a href="#home" img class="font-bold text-lg text-primary block py-6">
+                <img src="dist/img/gpsdi.png" style="margin-left:20px;" alt="Alfa Omega Families" width="60">      
+            </a>
+            <a href="#home" img class="font-bold text-lg text-primary block py-6">
+                <img src="dist/img/logo.png" style="margin-left:20px;" alt="Alfa Omega Families" width="70">      
+            </a>
             </div>
             <div class="flex items-center px-4">
               <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
@@ -67,9 +72,11 @@
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2">
-                    <h1 class="text-base font-semibold text-primary
-                    md:text-xl lg:text-2xl">Welcome To
-                       <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl lg:mb-1">Alfa Omega Families</span></h1>
+                    <!-- <h1 class="text sec-text text-base font-semibold text-primary
+                    md:text-xl lg:text-2xl">&nbsp;Welcome To
+                </h1> -->
+                <span class="text sec-text">Welcome To</span>
+                <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl lg:mb-1">Alfa Omega Families</span>
                     <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Church Located in <span class="text-dark">Blue Sky Pandurata Hotel</span> </h2>
                     <p class="font-medium text-secondary mb-10 leading-relaxed">Jl. Raden Saleh Raya No.12, Jakarta Pusat</p>
                     <a href="#" class="text-base font-semibols text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out">Contact Us</a>
@@ -400,5 +407,21 @@
     <!-- Footer End -->
 
     <script src="dist/js/script.js"></script>
+      <script>
+        const text = document.querySelector(".sec-text");
+
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = "Welcome";
+            }, 0);
+            setTimeout(() => {
+                text.textContent = "Selamat Datang";
+            }, 4000);
+            
+        }
+
+        textLoad();
+        setInterval(textLoad, 8000);
+    </script>  
 </body>
 </html>
